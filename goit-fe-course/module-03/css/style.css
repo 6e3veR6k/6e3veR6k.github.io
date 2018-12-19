@@ -1,0 +1,92 @@
+
+/*
+  font-family: 'Playfair Display', serif;
+  font-family: 'Ubuntu', sans-serif;
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.wrapper, a {
+  color: #626262;
+}
+
+.header {
+  padding: 73px 0 0 0;
+}
+
+.main-content {
+  margin: 100px 0 0 0;
+}
+
+.nav-list {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 100px;
+}
+
+.nav-item {
+  list-style: none;
+  display: inline-block;
+}
+
+.nav-link,
+.article-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.nav-link {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  color: #03A9F4;
+}
+
+.article {
+  width: 420px;
+  display: inline-block;
+}
+
+.article:nth-child(odd) {
+  margin-right: calc(900px - 420px * 2);
+}
+
+.article-content,
+.article-link {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.article-link {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #B4AD9E;
+}
+
+.article-header {
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* todo : 1. Установить шрифты глобально*/
+/* todo : 2. Поменять стить заголовков статьи*/
+/* todo : 3. Поменять текст параграфов*/
