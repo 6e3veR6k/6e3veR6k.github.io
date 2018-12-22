@@ -8,10 +8,20 @@ html {
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body, a {
+    font-family: 'Playfair Display', serif;
+    color: #626262;
 }
 
 .wrapper {
@@ -19,16 +29,9 @@ html {
   margin: 0 auto;
 }
 
-.wrapper, a {
-  color: #626262;
-}
-
 .header {
-  padding: 73px 0 0 0;
-}
-
-.main-content {
-  margin: 100px 0 0 0;
+  padding: 75px 0 0 0;
+  margin: 0 0 97px 0;
 }
 
 .nav-list {
@@ -53,13 +56,20 @@ html {
 }
 
 .nav-link {
-  font-family: 'Playfair Display', serif;
   text-transform: uppercase;
   font-size: 14px;
+  line-height: 24px;
+  vertical-align: top;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   color: #03A9F4;
+}
+
+.articles-section {
+  font-size: 0px;
+  margin-bottom: 55px;
 }
 
 .article {
@@ -67,26 +77,41 @@ html {
   display: inline-block;
 }
 
-.article:nth-child(odd) {
+.article:nth-child(even) {
   margin-right: calc(900px - 420px * 2);
 }
 
-.article-content,
-.article-link {
-  font-family: 'Ubuntu', sans-serif;
+.article_mb {
+  margin-bottom: 134px;
 }
 
 .article-link {
   text-transform: uppercase;
-  font-weight: 600;
   color: #B4AD9E;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  padding-top: 30px;
+  margin-bottom: 20px;
 }
 
 .article-header {
   font-size: 30px;
-  font-family: 'Playfair Display', serif;
+  margin-bottom: 31px;
 }
 
-/* todo : 1. Установить шрифты глобально*/
-/* todo : 2. Поменять стить заголовков статьи*/
-/* todo : 3. Поменять текст параграфов*/
+.article-content {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  width: 164px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #626262;
+}
+
