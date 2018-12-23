@@ -130,10 +130,17 @@ a {
   margin: 0 auto;
   width: 164px;
   height: 60px;
-  line-height: 60px;
-  text-align: center;
   background: transparent;
-  font-size: 16px;
+  font-size: 24px;
   border: 1px solid #626262;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 50px;
 }
 
+.btn:hover,
+.btn:focus {
+  color: rgb(255, 255, 255);
+  background: #03A9F4;
+  border: 1px solid #03A9F4;
+}
