@@ -97,6 +97,7 @@ body, a {
 .article-header {
   font-size: 30px;
   margin-bottom: 31px;
+  letter-spacing: -0.11px;
 }
 
 .article-content {
