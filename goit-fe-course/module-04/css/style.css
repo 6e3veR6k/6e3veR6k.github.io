@@ -63,13 +63,13 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 475px;
+  min-width: 475px;
   float: right;
 }
 
 .navigation-list-item {
   float: left;
-  margin-top: 3px;
+  padding-top: 3px;
 }
 
 .navigation-list-item:hover {
@@ -114,6 +114,10 @@ section > h2::after {
   margin-top: 27px;
 }
 
+.featured-products {
+  padding-bottom: 100px;
+}
+
 .featured-products-header {
   margin-bottom: 92px;
 }
@@ -122,7 +126,6 @@ section > h2::after {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 100px;
 }
 
 .product-item:not(:nth-of-type(4n)) {
@@ -224,5 +227,5 @@ section > h2::after {
 }
 
 .latest-news {
-  margin-bottom: 82px;
+  padding-bottom: 82px;
 }
