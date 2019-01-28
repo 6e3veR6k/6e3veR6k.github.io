@@ -46,53 +46,42 @@
     </div>
 
     <!-- slider -->
-    <div class="slider">
-      <!-- button controls: start -->
-        <div class="buttons-wrapper">
-          <button class="slider-control-prev">
-            <img src="./img/icons/arrow-right.png" alt="previous" class="slider-arrow" width="22" height="38">
-          </button>
-          <button class="slider-control-next">
-            <img src="./img/icons/arrow-left.png" alt="next" class="slider-arrow" width="22" height="38">
-          </button>
-        </div>
-      <!-- button controls: end -->
-      <!-- slides -->
-      <ul class="slides">
+    <div class="slider-wrapper">
 
-        <!-- slide item: start -->
-        <li class="slide-card">
-          <img src="./img/slider/slider_img_1.jpg" alt="Best tours" class="img-slide" width="1600" height="600">
+      <div class="slider">
+        <button class="slider-control-prev">
+          <img src="./img/icons/arrow-right.png" alt="previous" class="slider-arrow" width="22" height="38">
+        </button>
+        <button class="slider-control-next">
+          <img src="./img/icons/arrow-left.png" alt="next" class="slider-arrow" width="22" height="38">
+        </button>
 
-          <div class="slider-content">
-            <p class="slide-headline">AFFORDABLE PARIS TOURS</p>
-
-            <!-- slide links -->
-            <ul class="tour-details-list clearfix">
-              <li class="tour-details">
-                <a href="#" class="tour-details-link">City tours</a>
-              </li>
-              <li class="tour-details">
-                <a href="" class="tour-details-link">Tour tickets</a>
-              </li>
-              <li class="tour-details">
-                <a href="" class="tour-details-link">Tour guides</a>
-              </li>
-            </ul>
-          </li>
+        <div class="slider-content">
+          <p class="slide-headline">AFFORDABLE PARIS TOURS</p>
+          <!-- slide links -->
+          <ul class="tour-details-list clearfix">
+            <li class="tour-details">
+              <a href="#" class="tour-details-link">City tours</a>
+            </li>
+            <li class="tour-details">
+              <a href="" class="tour-details-link">Tour tickets</a>
+            </li>
+            <li class="tour-details">
+              <a href="" class="tour-details-link">Tour guides</a>
+            </li>
+          </ul>
           <!-- slide item: end -->
-          </div>
-
-      </ul>
+        </div>
+      </div>
     </div>
 
 
     <div class="section-wrapper">
-          <!-- collection cards: start -->
-      <section class="collection-section">
+      <!-- collection cards: start -->
+      <section class="collection-section container">
         <h2 class="section-collection_title">New collection</h2>
 
-        <ul class="card-list">
+        <ul class="card-list clearfix">
           <!-- list item 1 -->
           <li class="card-list_item">
             <div class="card">
@@ -101,10 +90,14 @@
 
                 <!-- overlay -->
                 <div class="overlay">
-                  <button class="btn-like"></button>
-                  <button class="btn-share"></button>
-                  <button class="btn-waiting"></button>
-                  <a href="#" class="add-to-cart-link">Add to cart</a>
+                  <div class="buttons-wrapper">
+                    <div class="btn-group clearfix">
+                      <button class="btn btn-like"></button>
+                      <button class="btn btn-share"></button>
+                      <button class="btn btn-waiting"></button>
+                    </div>
+                    <a href="#" class="add-to-cart-link">Add to cart</a>
+                  </div>
                 </div>
               </div>
               <div class="card-footer">
@@ -118,20 +111,25 @@
           <li class="card-list_item">
             <div class="card">
               <div class="card-img">
-                <img src="./img/products/wooman-tshirt.jpg" alt="Woman tshirt" class="collection-img" width="255" height="282">
+                <img src="./img/products/wooman-tshirt.jpg" alt="Woman tshirt" class="collection-img" width="255"
+                  height="282">
 
                 <!-- overlay -->
                 <div class="overlay">
-                  <button class="btn-like"></button>
-                  <button class="btn-share"></button>
-                  <button class="btn-waiting"></button>
-                  <a href="#" class="add-to-cart-link">Add to cart</a>
+                  <div class="buttons-wrapper">
+                    <div class="btn-group clearfix">
+                      <button class="btn btn-like"></button>
+                      <button class="btn btn-share"></button>
+                      <button class="btn btn-waiting"></button>
+                    </div>
+                    <a href="#" class="add-to-cart-link">Add to cart</a>
+                  </div>
                 </div>
-              </div>
               <div class="card-footer">
                 <p class="item-name">Blue tshirt</p>
                 <p class="item-price"><span class="item-price_currency">&#36;</span>26</p>
               </div>
+            </div>
             </div>
           </li>
 
@@ -139,14 +137,19 @@
           <li class="card-list_item">
             <div class="card">
               <div class="card-img">
-                <img src="./img/products/yellow-mens-tshirt.jpg" alt="Yellow mens tshirt" class="collection-img" width="255" height="282">
+                <img src="./img/products/yellow-mens-tshirt.jpg" alt="Yellow mens tshirt" class="collection-img" width="255"
+                  height="282">
 
                 <!-- overlay -->
                 <div class="overlay">
-                  <button class="btn-like"></button>
-                  <button class="btn-share"></button>
-                  <button class="btn-waiting"></button>
-                  <a href="#" class="add-to-cart-link">Add to cart</a>
+                  <div class="buttons-wrapper">
+                    <div class="btn-group clearfix">
+                      <button class="btn btn-like"></button>
+                      <button class="btn btn-share"></button>
+                      <button class="btn btn-waiting"></button>
+                    </div>
+                    <a href="#" class="add-to-cart-link">Add to cart</a>
+                  </div>
                 </div>
               </div>
               <div class="card-footer">
@@ -156,12 +159,45 @@
             </div>
           </li>
 
+          <!-- list item 4 -->
+          <li class="card-list_item">
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/products/coll-lingerie.jpg" alt="Coll lingerie" class="collection-img" width="255"
+                  height="282">
+
+                <!-- overlay -->
+                <div class="overlay">
+                  <div class="buttons-wrapper">
+                    <div class="btn-group clearfix">
+                      <button class="btn btn-like"></button>
+                      <button class="btn btn-share"></button>
+                      <button class="btn btn-waiting"></button>
+                    </div>
+                    <a href="#" class="add-to-cart-link">Add to cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <p class="item-name">Coll lingerie</p>
+                <p class="item-price"><span class="item-price_currency">&#36;</span>56</p>
+              </div>
+            </div>
+          </li>
+
         </ul>
       </section>
 
-          <!-- collection cards: end -->
+      <!-- collection cards: end -->
     </div>
     <!-- footer -->
+
+    <div class="footer-wrapper">
+      <footer class="footer container">
+        <p class="footer-rights">All Rights Reserved &#169; Dokan | Designed <span class="studio-name">ThemenGraph</span></p>
+      </footer>
+    </div>
+
   </div>
 </body>
 
