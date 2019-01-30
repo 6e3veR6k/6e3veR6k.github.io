@@ -35,6 +35,18 @@ img {
   margin: 0 auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 /* Header */
 .header-wrapper {
   background-color: var(--header-bg-color);
@@ -186,7 +198,7 @@ img {
   text-align: left;
 }
 
-.section-wrapper {
+.collection-section {
   padding: 82px 0 98px 0;
 }
 
@@ -224,9 +236,10 @@ img {
 }
 
 .card-list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
+  width: 1110px;
 }
 
 .card-list_item {
