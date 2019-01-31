@@ -1,0 +1,13 @@
+:root {
+    --base-font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --second-font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+    --base-font-size: 14px;
+    --base-line-height: 18px;
+    --base-font-color: #515151;
+    --second-font-color: #0f0101;
+    --theme-first-color: #1abc9c;
+    --theme-second-color: #323232;
+    --theme-header-color: #555252;
+    --theme-collection-bg: #e9f0fd;
+    --header-bg-color: #ffffff;
+}
