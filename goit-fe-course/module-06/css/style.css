@@ -136,6 +136,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  /* todo: change marging */
+  margin-bottom: 100px;
 }
 
 .logo-link {
@@ -204,32 +206,97 @@ img {
 /* Main
    ========================================================================== */
 
+.main-content {
+/*  todo: mesure pb  */
+  padding-bottom: 100px;
+}
+
 .section-title {
   margin: 0;
   font-size: 30px;
   font-family: var(--theme-ff-header);
   color: var(--theme-color-header);
   text-transform: uppercase;
+  text-align: center;
+  /* todo: mesure margin */
+  margin-bottom: 30px;
 }
 
 .headline {
   text-transform: none;
   font-size: 24px;
   font-family: var(--theme-ff-cursive);
+  display: block;
+  /* todo: mesure margin */
+  margin-bottom: 40px;
 }
 
-.serives-list {
+.services-list {
   margin: 0;
   padding: 0;
   list-style: none;
+  /* todo: mesure min height */
+  min-height: 240px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .service-link {
   text-decoration: none;
+  display: block;
+  padding-left: 83px;
+  position: relative;
+  width: 382px;
 }
 
 .service-link p {
   margin: 0;
+}
+
+.service-link::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 31px;
+  background-image: url(../img/sprites/spritesheet.png);
+}
+
+.photography::before {
+  background-position: -5px -5px;
+  width: 32px;
+  height: 31px;
+}
+
+.web::before {
+  width: 32px;
+  height: 32px;
+  background-position: -215px -5px;
+}
+
+.creativity::before {
+  width: 32px;
+  height: 28px;
+  background-position: -89px -5px;
+}
+
+.seo::before {
+  width: 32px;
+  height: 32px;
+  background-position: -47px -5px;
+}
+
+.layout::before {
+  width: 32px;
+  height: 31px;
+  background-position: -131px -5px;
+}
+
+.digital::before {
+  width: 32px;
+  height: 32px;
+  background-position: -173px -5px;
 }
 
 .service-name {
@@ -247,17 +314,28 @@ img {
 }
 
 .team-description {
-  margin: 0;
+  width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  /* todo: mesure mb */
+  margin-bottom: 30px;
 }
 
 .team-list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .figure-card {
   margin: 0;
+}
+
+.figure-img {
+/* todo: mesure mb   */
+  margin-bottom: 30px;
 }
 
 .card-description p {
@@ -270,15 +348,25 @@ img {
   font-size: 14px;
   line-height: 1.25;
   text-transform: uppercase;
+  text-align:center;
 }
 
 .member-position {
   font-weight: 300;
   font-style: italic;
+  text-align: center;
 }
 
 /* Footer
    ========================================================================== */
+.main-footer {
+  /*   check color for border */
+  border-top: 1px solid #e7e7e7;
+  min-height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .footer-rights {
   margin: 0;
@@ -294,9 +382,12 @@ img {
 
 .subscribe-form {
   border: 1px solid #e7e7e7;
+  height: 40px;
+  display: flex;
 }
 
 #input-email {
+  width: 230px;
   padding: 0;
   font-weight: 400;
   font-style: italic;
@@ -305,14 +396,22 @@ img {
   line-height: 24px;
   background-color: transparent;
   border: none;
+  text-indent: 14px;
 }
 
 .subscribe-btn {
   background-color: var(--theme-color-main);
   font-family: var(--theme-ff-header);
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
   border: none;
-  padding: 0;
+  padding: 0 33px;
+  transition: background-color 0.2s linear;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--theme-color-accent);
 }
