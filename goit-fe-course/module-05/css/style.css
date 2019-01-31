@@ -48,7 +48,6 @@ img {
 }
 
 /* Header */
-
 .header {
   padding: 40px 0 35px 0;
 }
@@ -103,6 +102,10 @@ img {
   margin-right: 36px;
 }
 
+.main-content {
+  background-color: var(--theme-collection-bg);
+}
+
 /* slider */
 .slider-wrapper {
   min-height: 600px;
@@ -112,10 +115,6 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.main-content {
-  background-color: var(--theme-collection-bg);
 }
 
 .slider {
@@ -146,12 +145,6 @@ img {
 }
 .slider-control-next {
   background-image: url(../img/icons/arrow-left.png);
-}
-
-.slider-control-prev img,
-.slider-control-next img {
-  display: block;
-  margin: 0 auto;
 }
 
 .slider-control-next {
