@@ -1,13 +1,15 @@
 :root {
-    --base-font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --second-font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
-    --base-font-size: 14px;
-    --base-line-height: 18px;
-    --base-font-color: #515151;
-    --second-font-color: #0f0101;
-    --theme-first-color: #1abc9c;
-    --theme-second-color: #323232;
-    --theme-header-color: #555252;
-    --theme-collection-bg: #e9f0fd;
-    --header-bg-color: #ffffff;
+    --theme-color-main: #95E1D3;
+    --theme-color-accent: #F38181;
+    --theme-color-accent-tr: rgba(243, 129, 129, 0.9);
+    --theme-color-accent-secondary: #FCE38A;
+    --theme-color-accent-secondary-tr: rgba(252, 227, 138, 0.9);
+    --theme-color-social: #EAFFD0;
+    --theme-color-header: #333333;
+    --theme-color-text: #999999;
+    --theme-ff-base: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 300i,400 */
+    --theme-ff-header: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 400,700 */
+    --theme-ff-cursive: 'Kaushan Script', cursive;
 }
