@@ -136,8 +136,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  /* todo: change marging */
-  margin-bottom: 100px;
+  margin-bottom: 130px;
 }
 
 .logo-link {
@@ -207,8 +206,11 @@ img {
    ========================================================================== */
 
 .main-content {
-/*  todo: mesure pb  */
-  padding-bottom: 100px;
+  padding-bottom: 80px;
+}
+
+.section-services {
+  padding-bottom: 90px;
 }
 
 .section-title {
@@ -218,8 +220,27 @@ img {
   color: var(--theme-color-header);
   text-transform: uppercase;
   text-align: center;
-  /* todo: mesure margin */
-  margin-bottom: 30px;
+  position: relative;
+}
+
+.services {
+  margin-bottom: 110px;
+}
+
+.team {
+  margin-bottom: 90px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  background-color: var(--theme-color-accent);
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .headline {
@@ -227,19 +248,18 @@ img {
   font-size: 24px;
   font-family: var(--theme-ff-cursive);
   display: block;
-  /* todo: mesure margin */
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .services-list {
   margin: 0;
   padding: 0;
   list-style: none;
-  /* todo: mesure min height */
-  min-height: 240px;
+  min-height: 244px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-content:space-between
 }
 
 .service-link {
@@ -317,8 +337,7 @@ img {
   width: 980px;
   margin: 0 auto;
   text-align: center;
-  /* todo: mesure mb */
-  margin-bottom: 30px;
+  padding-bottom: 82px;
 }
 
 .team-list {
@@ -334,8 +353,7 @@ img {
 }
 
 .figure-img {
-/* todo: mesure mb   */
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .card-description p {
@@ -406,6 +424,7 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
+  cursor: pointer;
   border: none;
   padding: 0 33px;
   transition: background-color 0.2s linear;
