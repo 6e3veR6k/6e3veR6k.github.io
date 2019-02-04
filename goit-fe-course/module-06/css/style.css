@@ -82,7 +82,6 @@ img {
   font-size: 14px;
   line-height: 1.25;
   display: block;
-  position: relative;
   transition: color .2s linear;
 }
 
@@ -91,14 +90,8 @@ img {
   display: block;
   background-color: var(--theme-color-accent);
   height: 3px;
-  position: absolute;
-  width: 0;
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition-property: width;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
 }
 
 .nav-link:hover,
@@ -108,8 +101,7 @@ img {
 
 .nav-link:hover::after,
 .nav-link:focus::after {
-  display: block;
-  width: 100%;
+  transform: scaleX(1);
 }
 
 
@@ -125,41 +117,40 @@ img {
 }
 
 .section-title {
-  margin: 0;
-  font-size: 30px;
-  font-family: var(--theme-ff-header);
-  color: var(--theme-color-header);
-  text-transform: uppercase;
+  margin: 0 0 20px 0;
   text-align: center;
+  font-size: 24px;
+  color: var(--theme-color-header);
+  font-family: var(--theme-ff-cursive);
   position: relative;
 }
 
-.services {
-  margin-bottom: 110px;
+.headline {
+  margin: 0;
+  font-size: 30px;
+  font-family: var(--theme-ff-header);
+  font-weight: 700;
+  color: var(--theme-color-header);
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.team {
-  margin-bottom: 90px;
-}
-
-.section-title::after {
+.headline::after {
   content: '';
   display: block;
   background-color: var(--theme-color-accent);
-  width: 60px;
   height: 3px;
-  position: absolute;
-  bottom: -45px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 60px;
+  margin: 0 auto;
+  margin-top: 42px;
 }
 
-.headline {
-  text-transform: none;
-  font-size: 24px;
-  font-family: var(--theme-ff-cursive);
-  display: block;
-  margin-bottom: 20px;
+.services {
+  margin-bottom: 65px;
+}
+
+.team {
+  margin-bottom: 45px;
 }
 
 .services-list {
@@ -173,19 +164,13 @@ img {
   align-content:space-between
 }
 
-.service-link {
-  text-decoration: none;
-  display: block;
+.services-list-item {
+  width: 382px;
   padding-left: 83px;
   position: relative;
-  width: 382px;
 }
 
-.service-link p {
-  margin: 0;
-}
-
-.service-link::before {
+.services-list-item::before {
   content: '';
   display: block;
   position: absolute;
@@ -194,6 +179,21 @@ img {
   background-image: url(../img/sprites/sprite.png);
   width: 32px;
   height: 32px;
+}
+
+.service-name {
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  color: var(--theme-color-header);
+  font-family: var(--theme-ff-header);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.service-description {
+  color: var(--theme-color-text);
+  font-family: var(--theme-ff-base);
+  margin: 0;
 }
 
 .photography::before {
@@ -218,20 +218,6 @@ img {
 
 .digital::before {
   background-position: -168px 0px;
-}
-
-.service-name {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--theme-color-header);
-  font-family: var(--theme-ff-header);
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.service-description {
-  color: var(--theme-color-text);
-  font-family: var(--theme-ff-base);
 }
 
 .team-description {
@@ -300,11 +286,7 @@ img {
   background-image: url(../img/sprites/sprite.png);
   background-position: 0px -32px;
   background-repeat: no-repeat;
-  border: none;
-  margin: 0;
-  padding: 0;
   transition: background-color .2s linear;
-  cursor: pointer;
 }
 
 .btn-twitter {
@@ -350,7 +332,6 @@ img {
 /* Footer
    ========================================================================== */
 .main-footer {
-  /*   check color for border */
   border-top: 1px solid #e7e7e7;
   min-height: 62px;
   display: flex;
