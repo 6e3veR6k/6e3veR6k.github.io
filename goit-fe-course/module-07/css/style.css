@@ -1,0 +1,80 @@
+/* @import "variables.css"; */
+
+:root {
+  --theme-color-main: #95E1D3;
+  --theme-color-accent: #F38181;
+  --theme-color-accent-tr: rgba(243, 129, 129, 0.9);
+  --theme-color-accent-secondary: #FCE38A;
+  --theme-color-accent-secondary-tr: rgba(252, 227, 138, 0.9);
+  --theme-color-social: #EAFFD0;
+  --theme-color-header: #333333;
+  --theme-color-text: #999999;
+  --theme-ff-base: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* 300i,400 */
+  --theme-ff-header: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* 400,700 */
+  --theme-ff-cursive: 'Kaushan Script', cursive;
+}
+
+/* Fonts
+   ========================================================================== */
+
+
+/* Basic styles
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--theme-color-text);
+  font-family: var(--theme-ff-base);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header
+   ========================================================================== */
+
+
+/* Main
+   ==========================================================================
+*/
+
+
+/* Member card
+   ========================================================================== */
+
+
+/* Footer
+   ========================================================================== */
