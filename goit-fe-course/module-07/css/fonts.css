@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'MontserratRg';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/montserrat/montserrat-v12-latin-regular.woff2') format('woff2'),
+        url('../fonts/montserrat/montserrat-v12-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'MontserratB';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/montserrat/montserrat-v12-latin-700.woff2') format('woff2'),
+        url('../fonts/montserrat/montserrat-v12-latin-700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'DroidSerifIt';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/droid-serif/DroidSerif-Italic.woff');
+}
+
+@font-face {
+    font-family: 'RobotoSlab';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/roboto-slab/RobotoSlab-Regular.woff');
+}
+
+@font-face {
+    font-family: 'WisdomScript';
+    font-style: normal;
+    src: url('../fonts/wisdom-script/WisdomScriptAJ.woff');
+}

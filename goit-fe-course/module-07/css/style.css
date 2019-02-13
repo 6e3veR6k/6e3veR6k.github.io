@@ -1,63 +1,5 @@
-/* @import "variables.css"; */
-
-:root {
-  --theme-color-main: #222222;
-  --theme-color-accent: #fed136;
-  --theme-color-header: #333333;
-  --theme-color-text: #777777;
-  --theme-color-placeholder: #bbbbbb;
-
-  --theme-ff-cursive: 'WisdomScript', cursive;
-  --theme-ff-header: 'MontserratRg', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --theme-ff-header2: 'MontserratB', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --theme-ff-main: 'RobotoSlab', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --theme-ff-main2: 'DroidSerifIt', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
-  --theme-ff-base: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/*
-==========================================================================
-    Fonts
-==========================================================================
-*/
-
-@font-face {
-  font-family: 'MontserratRg';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/montserrat/montserrat-v12-latin-regular.woff2') format('woff2'),
-    url('../fonts/montserrat/montserrat-v12-latin-regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'MontserratB';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/montserrat/montserrat-v12-latin-700.woff2') format('woff2'),
-    url('../fonts/montserrat/montserrat-v12-latin-700.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'DroidSerifIt';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/droid-serif/DroidSerif-Italic.woff');
-}
-
-@font-face {
-  font-family: 'RobotoSlab';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/roboto-slab/RobotoSlab-Regular.woff');
-}
-
-@font-face {
-  font-family: 'WisdomScript';
-  font-style: normal;
-  src: url('../fonts/wisdom-script/WisdomScriptAJ.woff');
-}
+@import "fonts.css";
+@import "variables.css";
 
 /*
 ==========================================================================
@@ -240,16 +182,16 @@ img {
   line-height: calc(14px*1.25);
 }
 
-.section-contact-us {
-  padding-top: 105px;
-}
-
 .contact-us {
   color: #ffffff;
 }
 
 .section-contact-us {
-  background-color: var(--theme-color-main);
+  padding-top: 105px;
+  background-image: url(../img/map-img.png),
+                    linear-gradient(rgb(34, 34, 34), rgb(34, 34, 34));
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 .contact-section {
