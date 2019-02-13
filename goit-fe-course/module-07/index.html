@@ -36,22 +36,22 @@
   <main class="main-content">
     <section class="section-services container">
       <h1 class="section-title">Services</h1>
-      <p class="section-text services-section">Proin iaculis purus consequat sem cure.</p>
+      <p class="section-headline services-headline">Proin iaculis purus consequat sem cure.</p>
       <ul class="service-list">
         <!-- Service item -->
-        <li class="service-list__item">
+        <li class="service-list__item basket">
           <h2 class="service-name">E-Commerce</h2>
           <p class="service-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum
             suscipit aenean rhoncus posuere odio in tincidunt.</p>
         </li>
         <!-- Service item -->
-        <li class="service-list__item">
+        <li class="service-list__item desktop">
           <h2 class="service-name">Responsive Web</h2>
           <p class="service-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum
             suscipit aenean rhoncus posuere odio in tincidunt.</p>
         </li>
         <!-- Service item -->
-        <li class="service-list__item">
+        <li class="service-list__item security">
           <h2 class="service-name">Web Security</h2>
           <p class="service-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum
             suscipit aenean rhoncus posuere odio in tincidunt.</p>
@@ -59,32 +59,21 @@
       </ul>
     </section>
 
-    <section class="section-contact-us container">
+    <section class="section-contact-us">
       <h2 class="section-title contact-us">Contact Us</h2>
-      <p class="section-text contact-section">Proin iaculis purus consequat sem cure.</p>
+      <p class="section-headline contact-us-headline">Proin iaculis purus consequat sem cure.</p>
       <form class="send-form container" action="#" method="get">
-        <input type="text" name="user-name" class="input user-name" placeholder="Your Name *" required>
-        <input type="email" name="user-email" class="input user-email" placeholder="Your E-mail *" required>
-        <input type="text" name="user-email-subj" class="input user-email-subj" placeholder="Subject">
-        <textarea name="user-email-subj" class="input user-email-subj" placeholder="Your message *" required></textarea>
-        <button type="submit">Send Email</button>
+        <div class="input-wrapper">
+          <input type="text" name="user-name" class="input user-name" placeholder="Your Name *" required>
+          <input type="email" name="user-email" class="input user-email" placeholder="Your E-mail *" required>
+          <input type="text" name="user-email-subj" class="input user-email-subj" placeholder="Subject">
+          <textarea name="user-email-message" class="input email-message" placeholder="Your message *"
+            required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
       </form>
     </section>
   </main>
-  <!-- todo: 1. Все шрифты скачать используя google-webfonts-helper и подключить локально через @font-face -->
-  <!-- bold: 700 -->
-  <!-- todo: 2. Отсутствующие платные шрифты скачать и заменить любыми другими с сервиса Google Fonts. -->
-  <!-- todo: 2.1 Wisdom Script WOFF -->
-  <!-- todo: 2.1 Montserrat Regular WOFF -->
-  <!-- todo: 2.1 Montserrat Bold WOFF -->
-  <!-- todo: 2.1 Droid Serif italic WOFF -->
-  <!-- todo: 2.1 RobotoSlab Regular WOFF -->
-  <!-- todo: 3. Используем только woff и woff2. -->
-  <!-- todo: 4. При оформлении формы обратить внимание на placeholder со звездочками, это поля обязательные для заполнения. -->
-
-  <!-- todo: 5. Атрибут name у полей формы должен иметь смысл. -->
-  <!-- todo: 6. Добавить к обязательным полям эффект outline зеленого цвета если значение поля валидно ( :valid) и красного цвета если не валидно ( :invalid). -->
-
 </body>
 
 </html>
