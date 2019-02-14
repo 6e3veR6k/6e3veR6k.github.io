@@ -82,6 +82,7 @@ img {
 }
 
 .nav-link {
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
   font-family: var(--theme-ff-header);
@@ -102,7 +103,6 @@ img {
 */
 .section-services {
   padding-bottom: 120px;
-  min-height: 400px;
 }
 
 .section-title {
@@ -204,8 +204,7 @@ img {
 
 .send-form {
   margin: 0 auto;
-  min-height: 385px;
-
+  padding-bottom: 90px;
 }
 
 .input-wrapper {
