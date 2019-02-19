@@ -1,55 +1,6 @@
 @import "fonts.css";
 @import "variables.css";
+@import "./libs/common.css";
+@import "./components/hero.css";
 
-/*
-==========================================================================
-    Basic
-==========================================================================
-*/
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  line-height: 1.2;
-  color: var(--theme-color-text);
-  font-family: var(--theme-ff-main);
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
-.container {
-  width: 940px;
-  margin: 0 auto;
-}
-
-/*
-==========================================================================
-    Header
-==========================================================================
-*/
 
