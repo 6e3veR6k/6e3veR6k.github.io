@@ -58,6 +58,10 @@
         min-width: 925px;
     }
 
+    .partners-title {
+        margin-bottom: 3.2rem;
+    }
+
     .partner-list {
         width: 100%;
         margin: 0 auto;
