@@ -1,6 +1,5 @@
 .hero {
-    /* background-image: url(../../img/friends.jpg); */
-    background-color: #000;
+    background-image: url(../../img/friends.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -10,6 +10,11 @@
         padding-bottom: 3.7rem;
     }
 
+    .hero-title {
+        margin: 0 auto;
+
+    }
+
     .header-links-list {
         margin-bottom: 12rem;
     }
@@ -109,7 +114,8 @@
     .partners {
         margin: 0 auto;
         padding-bottom: 6rem;
-        width: 65.2777%;
+        max-width: 65.2777%;
+        min-width: 925px;
     }
 
     .partner-list {
