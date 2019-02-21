@@ -1,6 +1,23 @@
 .hero {
-    background-image: url(../../img/friends.jpg);
+    /* background-image: url(../../img/friends.jpg); */
+    background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: var(--light-font-color);
+    text-align: center;
+    padding-bottom: 13.8rem;
+}
+
+.hero-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.hero-desc {
+    margin: 0;
+    font-family: var(--text-ff);
+    font-size: 1.8rem;
+    padding: 1.7rem 0;
 }

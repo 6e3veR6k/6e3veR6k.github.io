@@ -2,5 +2,7 @@
 @import "variables.css";
 @import "./libs/common.css";
 @import "./components/hero.css";
-
+@import "./components/header.css";
+@import "./components/partner-card.css";
+@import "./media.css";
 

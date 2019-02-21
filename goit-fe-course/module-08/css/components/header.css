@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.logo-link {
+    display: block;
+    text-decoration: none;
+    color: var(--light-font-color);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.header-links-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+

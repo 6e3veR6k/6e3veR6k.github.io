@@ -33,32 +33,57 @@ body {
     line-height: 1.2;
 }
 
-a {
+.btn, .btn-flat {
     display: block;
     text-decoration: none;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-p {
-    margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-p.partner-desc {
-    font-family: var(--text-ff);
+    padding: 1.1rem 2.7rem;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .btn {
-    padding: 1.1rem 2.7rem;
+    display: inline-block;
+    border-width: 0.2rem;
+    border-style: solid;
     border-radius: 2.2rem;
-    border: 1px solid red;
-    background-color: transparent;
+    transition: background-color .2s ease-in-out,
+                color .2s ease-in-out;
+}
+
+.btn-flat {
+    border: none;
+    color: var(--light-font-color);
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-flat:hover,
+.btn-flat:focus {
+    background-color: #ffffff27;
+}
+
+.btn-transparent {
+    border-color: var(--light-font-color);
+    color: var(--light-font-color);
+
+}
+
+.btn-transparent:hover,
+.btn-transparent:focus {
+    background-color: var(--light-font-color);
+    color: #000000;
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+}
+
+.btn-transparent-accent {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-transparent-accent:hover,
+.btn-transparent-accent:focus {
+    background-color: var(--accent-color);
+    color: var(--light-font-color);
 }
