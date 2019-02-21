@@ -1,7 +1,11 @@
 .header {
-    display: flex;
-    justify-content: center;
     padding-top: 2rem;
+    display: flex;
+    margin: 0 auto;
+    width: 87.5%;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 3.7rem;
 }
 
 .logo-link {
@@ -17,5 +21,11 @@
     padding: 0;
     list-style: none;
     display: flex;
+    margin-bottom: 12rem;
 }
+
+.header-links-list-item:first-child {
+    padding-right: 1rem;
+}
+
 

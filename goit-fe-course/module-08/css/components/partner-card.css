@@ -1,24 +1,32 @@
 .partners {
     text-align: center;
     padding-top: 6.8rem;
+    padding-bottom: 6rem;
 }
 
 .partners-title {
-    margin: 0 0 1.8rem 0;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 1.8rem;
     font-size: 2.2rem;
 }
 
 .partner-list {
     margin: 0;
+    margin-bottom: 3rem;
     padding: 0;
     list-style: none;
 }
 
+.partner-list-item {
+    margin: 0 auto;
+    padding: 0 2.3rem;
+    width: 76.875%;
+}
 
 
 .list-item-figure {
-    margin: 0 auto;
-    width: 22rem;
+    margin: 0;
 }
 
 .img-wrapper {
@@ -63,12 +71,16 @@
     background-position: -90px 5px;
 }
 
-
 .partner-img {
     height: 12.1rem;
     width: 12.1rem;
     border-radius: 50%;
 }
+
+.partner-list-item:not(:last-child) {
+    margin-bottom: 2.7rem;
+}
+
 
 .card-info {
     padding-top: 1.8rem;

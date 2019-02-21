@@ -1,56 +1,18 @@
-@media (max-width: 749px) {
-    .container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
+@media screen and (min-width: 750px) {
     .header {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-bottom: 3.7rem;
-    }
-
-    .hero-title {
-        margin: 0 auto;
-
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0;
+        margin-bottom: 14.9rem;
     }
 
     .header-links-list {
-        margin-bottom: 12rem;
-    }
-
-    .partners {
-        padding-bottom: 6rem;
-    }
-
-    .partner-list {
-        margin-bottom: 3rem;
-    }
-
-    .partner-list-item:not(:last-child) {
-        margin-bottom: 2.7rem;
-    }
-
-}
-
-@media (min-width: 750px) and (max-width: 939px) {
-    .container {
-        width: 100%;
-    }
-    .header {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 15rem;
-        width: 88%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        margin-bottom: 0;
     }
 
     .hero {
         padding-bottom: 23rem;
     }
-
 
     .hero-title {
         margin: 0 auto;
@@ -60,7 +22,7 @@
 
     .hero-desc {
         font-size: 2.4rem;
-        padding: 4.4rem 0 4rem 0;
+        padding: 3.3rem 0 3.4rem 0;
     }
 
     .partners {
@@ -73,57 +35,39 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .partner-list .partner-list-item {
+        margin-bottom: 0;
+    }
+
+    .partner-list-item {
+        width: 43.05%;
     }
 
     .partner-list-item:nth-child(-n+2) {
         margin-bottom: 6rem;
     }
-
 }
 
-@media (min-width: 940px) {
-    .container {
-        width: 100%;
-    }
-
-    .header {
-        width: 65.2777%;
-        margin: 0 auto;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 15rem;
-    }
-
-    .hero {
-        padding-bottom: 23rem;
-    }
-
-    .hero-title {
-        margin: 0 auto;
-        font-size: 5.15rem;
-        width: 50rem;
-    }
-
-    .hero-desc {
-        font-size: 2.4rem;
-        padding: 4.4rem 0 4rem 0;
-    }
-
+@media screen and (min-width: 1024px) {
     .partners {
         margin: 0 auto;
-        padding-bottom: 6rem;
         max-width: 65.2777%;
         min-width: 925px;
     }
 
     .partner-list {
+        width: 100%;
         margin: 0 auto;
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
-        margin-bottom: 4rem;
     }
 
+    .partner-list .partner-list-item {
+        margin: 0;
+    }
 
 }

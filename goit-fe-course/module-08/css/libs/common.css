@@ -77,6 +77,12 @@ body {
     background-color: var(--accent-color);
 }
 
+.btn-accent:hover,
+.btn-accent:focus {
+    background-color: var(--light-font-color);
+    color: var(--accent-color);
+}
+
 .btn-transparent-accent {
     border-color: var(--accent-color);
     color: var(--accent-color);
