@@ -33,6 +33,11 @@ body {
     line-height: 1.2;
 }
 
+.container {
+    margin: 0 auto;
+    width: 320px;
+}
+
 .btn, .btn-flat {
     display: block;
     text-decoration: none;

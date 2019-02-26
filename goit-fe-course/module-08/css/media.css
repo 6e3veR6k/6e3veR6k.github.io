@@ -1,4 +1,8 @@
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 48rem) {
+    .container {
+        width: 66rem;
+    }
+
     .header {
         flex-direction: row;
         justify-content: space-between;
@@ -18,11 +22,12 @@
         margin: 0 auto;
         font-size: 5.15rem;
         width: 50rem;
+        margin-bottom: 3.3rem;
     }
 
     .hero-desc {
         font-size: 2.4rem;
-        padding: 3.3rem 0 3.4rem 0;
+        margin-bottom: 3.4rem;
     }
 
     .partners {
@@ -30,12 +35,12 @@
     }
 
     .partner-list {
-        margin: 0 auto;
-        width: 66.666%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-bottom: 4rem;
     }
 
     .partner-list .partner-list-item {
@@ -51,7 +56,11 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 58.75rem) {
+    .container {
+        width: 94rem;
+    }
+
     .partners {
         margin: 0 auto;
         max-width: 65.2777%;
@@ -64,7 +73,6 @@
 
     .partner-list {
         width: 100%;
-        margin: 0 auto;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;

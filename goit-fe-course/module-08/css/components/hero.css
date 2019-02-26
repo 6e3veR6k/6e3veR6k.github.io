@@ -14,11 +14,11 @@
     text-transform: uppercase;
     font-size: 3rem;
     width: 29.5rem;
+    margin-bottom: 1.7rem;
 }
 
 .hero-desc {
-    margin: 0;
+    margin: 0 0 1.7rem 0;
     font-family: var(--text-ff);
     font-size: 1.8rem;
-    padding: 1.7rem 0;
 }
