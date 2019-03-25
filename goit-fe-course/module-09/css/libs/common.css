@@ -1,0 +1,100 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+body {
+    font-family: var(--headline-ff);
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+.container {
+    margin: 0 auto;
+    width: 320px;
+}
+
+.btn, .btn-flat {
+    display: block;
+    text-decoration: none;
+    padding: 1.1rem 2.7rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 2.2rem;
+    transition: background-color .2s ease-in-out,
+                color .2s ease-in-out;
+}
+
+.btn-flat {
+    border: none;
+    color: var(--light-font-color);
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-flat:hover,
+.btn-flat:focus {
+    background-color: #ffffff27;
+}
+
+.btn-transparent {
+    border-color: var(--light-font-color);
+    color: var(--light-font-color);
+
+}
+
+.btn-transparent:hover,
+.btn-transparent:focus {
+    background-color: var(--light-font-color);
+    color: #000000;
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    background-color: var(--light-font-color);
+    color: var(--accent-color);
+}
+
+.btn-transparent-accent {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-transparent-accent:hover,
+.btn-transparent-accent:focus {
+    background-color: var(--accent-color);
+    color: var(--light-font-color);
+}

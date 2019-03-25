@@ -1,0 +1,101 @@
+.partners {
+    text-align: center;
+    padding-top: 6.8rem;
+    padding-bottom: 6rem;
+}
+
+.partners-title {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 1.8rem;
+    font-size: 2.2rem;
+}
+
+.partner-list {
+    margin: 0;
+    margin-bottom: 3rem;
+    padding: 0;
+    list-style: none;
+}
+
+.partner-list-item {
+    margin: 0 auto;
+    padding: 0 2.3rem;
+    width: 76.875%;
+}
+
+
+.list-item-figure {
+    margin: 0;
+}
+
+.img-wrapper {
+    height: 12.1rem;
+    width: 12.1rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.img-wrapper::before {
+    content: "";
+    display: block;
+    height: 3.7rem;
+    width: 3.7rem;
+    border: 0.4rem solid #fff;
+    border-radius: 50%;
+    background-image: url(../../img/sprites/main_icons.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+.partner_first::before {
+    background-color: var(--first-icon-color);
+    background-position: 7px 5px;
+}
+
+.partner_second::before {
+    background-color: var(--second-icon-color);
+    background-position: -26px 5px;
+}
+
+.partner_third::before {
+    background-color: var(--third-icon-color);
+    background-position: -57px 5px;
+}
+
+.partner_fourth::before {
+    background-color: var(--fourth-icon-color);
+    background-position: -90px 5px;
+}
+
+.partner-img {
+    height: 12.1rem;
+    width: 12.1rem;
+    border-radius: 50%;
+}
+
+.partner-list-item:not(:last-child) {
+    margin-bottom: 2.7rem;
+}
+
+
+.card-info {
+    padding-top: 1.8rem;
+}
+
+.partner-name,
+.partner-desc {
+    margin: 0;
+}
+
+.partner-name {
+    margin-bottom: 17px;
+}
+
+
+.partner-desc {
+    font-family: var(--text-ff);
+}

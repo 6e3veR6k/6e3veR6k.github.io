@@ -1,0 +1,13 @@
+:root {
+    --light-font-color: #ffffff;
+    --dark-font-color: #333333;
+    --base-font-color: #666666;
+    --accent-color: #ff4e50;
+    --first-icon-color: #ff4e50;
+    --second-icon-color: #1cd7ad;
+    --third-icon-color: #ffa507;
+    --fourth-icon-color: #4e73db;
+
+    --headline-ff: MontserratB, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --text-ff: RobotoL, 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
