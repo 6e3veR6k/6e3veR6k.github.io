@@ -1,7 +1,7 @@
 'use strict';
 /*
  * Задача 1
-*/
+ */
 const ADMIN_PASSWORD = 'm4ng0h4ckz';
 let message;
 
@@ -10,11 +10,9 @@ const userInput = prompt('Enter the password');
 
 if (!userInput) {
     message = 'Отменено пользователем!';
-}
-else if (userInput === ADMIN_PASSWORD) {
+} else if (userInput === ADMIN_PASSWORD) {
     message = 'Добро пожаловать!';
-}
-else {
+} else {
     message = 'Доступ запрещен, неверный пароль!';
 }
 
@@ -22,7 +20,7 @@ alert(message);
 
 /*
  * Задача 2
-*/
+ */
 
 let credits = 23580;
 const pricePerDroid = 3000;
@@ -33,8 +31,7 @@ function getTotalCost(quantity) {
 
     if (balance < 0) {
         console.log('Недостаточно средств на счету!');
-    }
-    else {
+    } else {
         console.log(`Вы купили ${quantity} дроидов, на счету осталось ${balance} кредитов.`);
     }
 }
@@ -47,14 +44,14 @@ for (const quantity of quantities) {
 
 /*
  * Задача 3
-*/
+ */
 
 function getTravelCost(country) {
 
     let cost;
     let haveMatched = false;
 
-    if(!country || typeof country != "string") {
+    if (!country || typeof country != "string") {
         console.log('В качестве аргумента передана не строка.');
         return;
     }
@@ -85,7 +82,7 @@ function getTravelCost(country) {
     }
 
 
-    if(haveMatched) {
+    if (haveMatched) {
         console.log(`Доставка в ${country} будет стоить ${cost}`);
     } else {
         console.log('В вашей стране доставка не доступна');
