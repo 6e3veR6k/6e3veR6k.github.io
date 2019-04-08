@@ -75,4 +75,4 @@ do {
     } else {
         alert('У вас закончились попытки, аккаунт заблокирован!');
     }
-} while (attemptsLeft > 0 && userInput !== null)
+} while (attemptsLeft > 0 && userInput !== null);
