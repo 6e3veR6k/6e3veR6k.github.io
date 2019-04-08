@@ -1,24 +1,40 @@
-'use strict'
+
+
+/* jshint esversion: 6 */
+/* jshint strict: global */
+/* jshint devel: true */
+
+'use strict';
+
 // Задание 1
 
 const numbers = [];
 let input;
 
-do {
+
+while (true) {
 
     input = prompt('Введите произвольное число: ');
+
+    if(!input) {
+        break;
+    }
 
     if (isNumeric(input)) {
         numbers.push(Number(input));
     } else {
-        alert(`Было введено не число, попробуйте еще раз. ${input} - ${typeof input}`)
+        alert(`Было введено не число, попробуйте еще раз. ${input} - ${typeof input}`);
     }
 
-} while (input !== null)
+}
 
 let total = getSum(numbers);
 // console.log(`Общая сумма чисел равна ${total}`);
-alert(`Общая сумма чисел равна ${total}`);
+if (total) {
+    alert(`Общая сумма чисел равна ${total}`);
+} else {
+    alert(`Вы не ввели ни одного числа.`);
+}
 
 
 function isNumeric(input) {
