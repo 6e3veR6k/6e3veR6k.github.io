@@ -19,7 +19,7 @@ const isLoginUnique = function (allLogins, login) {
 
 const isStrEmpty = function (login) {
     return !login || /\s/.test(login);
-}
+};
 
 const addLogin = function (allLogins, login) {
     if (isStrEmpty(login)) {
