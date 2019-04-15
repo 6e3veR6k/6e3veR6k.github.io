@@ -10,8 +10,7 @@
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
 const isLoginValid = login => {
-    // return login.length >= 4 && login.length <= 16;
-    return /^[a-z]{4,16}$/gi.test(login);
+    return login.length >= 4 && login.length <= 16;
 };
 
 const isLoginUnique = function (allLogins, login) {
@@ -26,14 +25,19 @@ const addLogin = function (allLogins, login) {
     if (isStrEmpty(login)) {
         console.log('Строка пустая.');
         return;
-    } else if(!isLoginValid(login)) {
-        console.log('Ошибка! Логин должен быть от 4 до 16 символов');
-    } else if (!isLoginUnique(allLogins, login)) {
-        console.log('Такой логин уже используется!');
-    } else {
+    }
+
+    if (isLoginValid(login) && isLoginUnique(allLogins, login)) {
         allLogins.push(login);
         console.log('Логин успешно добавлен!');
     }
+    else if (!isLoginUnique(allLogins, login)) {
+        console.log('Такой логин уже используется!');
+    }
+    else {
+        console.log('Ошибка! Логин должен быть от 4 до 16 символов');
+    }
+
 };
 
 // Вызовы функции для проверки
@@ -48,7 +52,6 @@ addLogin([], 'jqueryisex');
 addLogin([], ' ');
 addLogin([], null);
 addLogin([], 0);
-addLogin([], 1);
 addLogin([], undefined);
 
 
