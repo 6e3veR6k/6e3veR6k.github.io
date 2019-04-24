@@ -1,4 +1,4 @@
-/* jshint esversion: 6 */
+/* jshint esversion: 9 */
 /* jshint strict: global */
 /* jshint devel: true */
 
@@ -37,14 +37,25 @@ const notepad = {
         }
     },
     updateNoteContent(id, updatedContent) {
-        let note = this.findNoteById(id);
+        // const note = this.findNoteById(id);
         // for (let key of Object.keys(updatedContent)) {
         //     note[key] = updatedContent[key];
         // }
-        // note = Object.assign(note, updatedContent);
-        note = { ...note, ..}
 
-        return note;
+
+        // esversion 6
+        // note = Object.assign(note, updatedContent);
+
+        // esversion 9
+        for(let i = 0; i < this.notes.length; i += 1) {
+            if(this.notes[i].id == id) {
+                this.notes[i] = { ...this.notes[i], ...updatedContent };
+                return this.notes[i];
+            }
+        }
+        return;
+
+        // return note;
     },
     updateNotePriority(id, priority) {
         let note = this.findNoteById(id);
