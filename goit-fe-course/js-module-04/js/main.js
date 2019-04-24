@@ -180,7 +180,7 @@ notepad.updateNotePriority('id-4', Priority.NORMAL);
 
 console.log(
     'Заметки после обновления приоритета для id-4: ',
-    notepad.getNotes(),
+    notepad.getNotes()
 );
 
 /*
@@ -190,7 +190,7 @@ notepad.updateNotePriority('id-3', Priority.LOW);
 
 console.log(
     'Заметки после обновления приоритета для id-3: ',
-    notepad.getNotes(),
+    notepad.getNotes()
 );
 
 /*
@@ -198,7 +198,7 @@ console.log(
  */
 console.log(
     'Отфильтровали заметки по ключевому слову "html": ',
-    notepad.filterNotesByQuery('html'),
+    notepad.filterNotesByQuery('html')
 );
 
 /*
@@ -206,7 +206,7 @@ console.log(
  */
 console.log(
     'Отфильтровали заметки по ключевому слову "javascript": ',
-    notepad.filterNotesByQuery('javascript'),
+    notepad.filterNotesByQuery('javascript')
 );
 
 /*
@@ -214,7 +214,7 @@ console.log(
  */
 console.log(
     'Отфильтровали заметки по нормальному приоритету: ',
-    notepad.filterNotesByPriority(Priority.NORMAL),
+    notepad.filterNotesByPriority(Priority.NORMAL)
 );
 
 /*
@@ -226,7 +226,7 @@ notepad.updateNoteContent('id-3', {
 
 console.log(
     'Заметки после обновления контента заметки с id-3: ',
-    notepad.getNotes(),
+    notepad.getNotes()
 );
 
 /*
