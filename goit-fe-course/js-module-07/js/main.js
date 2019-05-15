@@ -51,3 +51,8 @@ console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, об
 
 console.log(getUsersWithAge(users, 30, 40));
 // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
+
+
+const getTotalBalance = users => users.reduce((agr, user) => agr += user.balance, 0);
+
+console.log(getTotalBalance(users)); // 20916
