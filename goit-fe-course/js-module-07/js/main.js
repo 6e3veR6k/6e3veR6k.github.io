@@ -10,10 +10,12 @@ const getAllNames = users => users.map(user => user.name);
 console.log(getAllNames(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
+
 const getUsersByEyeColor = (users, color) => users.filter(user => user.eyeColor == color);
 
 console.log(getUsersByEyeColor(users, 'blue'));
 // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+
 
 // const getUsersByGender = (users, gender) => {
 //     return users.reduce((acc, user) => {
@@ -28,3 +30,8 @@ const getUsersByGender = (users, gender) => users.filter(user => user.gender == 
 
 console.log(getUsersByGender(users, 'male'));
 // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+
+
+const getInactiveUsers = users => users.filter(user => !user.isActive);
+
+console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
