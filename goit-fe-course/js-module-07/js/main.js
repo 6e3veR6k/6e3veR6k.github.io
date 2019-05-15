@@ -35,3 +35,11 @@ console.log(getUsersByGender(users, 'male'));
 const getInactiveUsers = users => users.filter(user => !user.isActive);
 
 console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+
+
+const getUserByEmail = (users, email) => users.find(user => user.email == email);
+
+console.log(getUserByEmail(users, 'shereeanthony@kog.com'));
+// {объект пользователя Sheree Anthony}
+console.log(getUserByEmail(users, 'elmahead@omatom.com'));
+// {объект пользователя Elma Head}
