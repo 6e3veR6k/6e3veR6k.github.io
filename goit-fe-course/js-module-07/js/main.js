@@ -56,3 +56,9 @@ console.log(getUsersWithAge(users, 30, 40));
 const getTotalBalance = users => users.reduce((agr, user) => agr += user.balance, 0);
 
 console.log(getTotalBalance(users)); // 20916
+
+
+const getUsersByFriend = (users, name) => users.filter(user => user.friends.includes(name)).map(user => user.name);
+
+console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
