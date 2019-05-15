@@ -62,3 +62,18 @@ const getUsersByFriend = (users, name) => users.filter(user => user.friends.incl
 
 console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
+
+const getUniqueSkills = users => users.map(user => user.skills)
+    .reduce((acc, skills) => {
+        for(let skill of skills) {
+            if(!acc.includes(skill)) {
+                acc.push(skill);
+            }
+        }
+        return acc;
+    }, [])
+    .sort();
+
+console.log(getUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
