@@ -64,13 +64,11 @@ console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sh
 console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 
 
-const getUniqueSkills = users => users.map(user => user.skills)
-    .reduce((acc, skills) => {
-        for(let skill of skills) {
-            if(!acc.includes(skill)) {
-                acc.push(skill);
-            }
-        }
+const getUniqueSkills = users => users.reduce((acc, user) => {
+
+        user.skills.forEach(skill => {
+            if(!acc.includes(skill)) acc.push(skill);});
+
         return acc;
     }, [])
     .sort();
