@@ -6,36 +6,6 @@
 import quizdata from './quiz-data.js';
 
 
-
-/*<h2 class="questions-form-title">Заголовок теста</h2>
-<ul class="questions-list">
-
-    <li class="questions-list-item">
-        <section class="question-card">
-            <h3 class="question-card-title">1. Текст вопроса</h3>
-            <ol class="answers-list">
-                <li class="answers-list-item">
-                    <input type="radio" name="question-1" value="" id="answer-1" class="answer-check visually-hidden"/>
-                    <label class="answer-check-label" for="answer-1">Ответ 1</label>
-                </li>
-                <li class="answers-list-item">
-                    <input type="radio" name="question-1" value="" id="answer-2" class="answer-check visually-hidden"/>
-                    <label class="answer-check-label" for="answer-2">Ответ 2</label>
-                </li>
-            </ol>
-        </section>
-    </li>
-
-</ul> */
-
-/* ================== create objects =================== */
-
-
-function getAnswers({ questions }) {
-    return questions.map((question, index) => [`q${index}`, question.answer]);
-}
-
-
 function createForm({ title, questions }) {
     const form = document.querySelector('form.questions-form')
 
@@ -49,7 +19,7 @@ function createForm({ title, questions }) {
     const questionsList = createElementWithClass('ul', 'questions-list');
 
     const listOfQuestions = questions.reduce((aggr, question, index) => {
-        questionsList.appendChild(createQuestionElement(index, question.question, question.choices));
+        questionsList.appendChild(createQuestionListItem(index, question.question, question.choices));
         return questionsList;
     }, questionsList);
 
@@ -60,49 +30,25 @@ function createForm({ title, questions }) {
 }
 
 
-function handleSubmitForm(event) {
-    event.preventDefault();
-    const form = event.currentTarget;
+function createOverlay(innerTextContent, isPassed) {
 
-    showModal(form);
-}
+    const overlayBlock = createElementWithClass('div', 'overlay');
+    const resultBlock = createElementWithClass('div', 'test-results');
+    const resultBlockText = createElementWithClass('p', 'test-results-content');
 
-
-function showModal(form) {
-    const userAnswers = getFormValues(form);
-    const quizAnswers = getAnswers(quizdata);
-    const wrapper = document.querySelector('.wrapper');
-    const testPercent = getTestResult(userAnswers, quizAnswers);
-    const isPassed = getTestResult(userAnswers, quizAnswers) >= 80;
-    const overlay = createOverlay(`Ваш результат: ${testPercent}%`, isPassed);
-    overlay.addEventListener('click', handleOverlayClick);
-    wrapper.prepend(overlay);
-}
-
-function handleRadioCheck(event) {
-    const form = event.currentTarget;
-    const userAnswers = getFormValues(form);
-    const quizAnswers = getAnswers(quizdata);
-    if (userAnswers.length != quizAnswers.length) {
-        return;
+    if (!isPassed) {
+        resultBlockText.classList.add('test-failed');
     }
 
-    const submitBtn = form.querySelector('button[type="submit"]');
-    submitBtn.disabled = false;
+    resultBlockText.textContent = innerTextContent;
+    resultBlock.appendChild(resultBlockText);
+    overlayBlock.appendChild(resultBlock);
+
+    return overlayBlock;
 }
 
 
-function getFormValues(form) {
-    const formData = new FormData(form);
-
-    const results = []
-    formData.forEach((value, name) => results.push([name, value]))
-
-    return results;
-}
-
-
-function createQuestionElement(questionId, question, choices) {
+function createQuestionListItem(questionId, question, choices) {
     const questionsListItem = createElementWithClass('li', 'questions-list-item');
 
     const sectionQuestionCard = createElementWithClass('section', 'question-card');
@@ -152,33 +98,8 @@ function createElementWithClass(tagName, ...cssClasses) {
     return tagElement;
 }
 
-function createOverlay(innerTextContent, isPassed) {
 
-    const overlayBlock = createElementWithClass('div', 'overlay');
-    const resultBlock = createElementWithClass('div', 'test-results');
-    const resultBlockText = createElementWithClass('p', 'test-results-content');
-
-    if (!isPassed) {
-        resultBlockText.classList.add('test-failed');
-    }
-
-    resultBlockText.textContent = innerTextContent;
-    resultBlock.appendChild(resultBlockText);
-    overlayBlock.appendChild(resultBlock);
-
-    return overlayBlock;
-}
-
-
-const quizForm = createForm(quizdata);
-
-function handleOverlayClick(event) {
-    const overlay = event.currentTarget;
-    overlay.remove();
-}
-
-
-function getTestResult(userAnswers, answers) {
+function getTestResultPercent(userAnswers, answers) {
     const result = [];
     for (const userAnswer of userAnswers) {
         for (const answer of answers) {
@@ -194,6 +115,61 @@ function getTestResult(userAnswers, answers) {
     return percent;
 }
 
+
+function getFormData(form) {
+    const formData = new FormData(form);
+
+    const results = []
+    formData.forEach((value, name) => results.push([name, value]))
+
+    return results;
+}
+
+
+function getAnswers({ questions }) {
+    return questions.map((question, index) => [`q${index}`, question.answer]);
+}
+
+
+function showModal(form) {
+    const userAnswers = getFormData(form);
+    const quizAnswers = getAnswers(quizdata);
+    const wrapper = document.querySelector('.wrapper');
+    const testPercent = getTestResultPercent(userAnswers, quizAnswers);
+    const isPassed = getTestResultPercent(userAnswers, quizAnswers) >= 80;
+    const overlay = createOverlay(`Ваш результат: ${testPercent}%`, isPassed);
+    overlay.addEventListener('click', handleOverlayClick);
+    wrapper.prepend(overlay);
+}
+
+
+function handleRadioCheck(event) {
+    const form = event.currentTarget;
+    const userAnswers = getFormData(form);
+    const quizAnswers = getAnswers(quizdata);
+    if (userAnswers.length != quizAnswers.length) {
+        return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = false;
+}
+
+
+function handleSubmitForm(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    showModal(form);
+}
+
+
+function handleOverlayClick(event) {
+    const overlay = event.currentTarget;
+    overlay.remove();
+}
+
+const quizForm = createForm(quizdata);
 
 
 
