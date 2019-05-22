@@ -30,13 +30,11 @@ import quizdata from './quiz-data.js';
 
 /* ================== create objects =================== */
 
-const userAnswers = [];
-
-
 
 function getAnswers({ questions }) {
-    return questions.map((question, index) => [`question${index}`, `${question.answer}`]);
+    return questions.map((question, index) => [`q${index}`, question.answer]);
 }
+
 
 function createForm({ title, questions }) {
     const form = document.querySelector('form.questions-form')
@@ -61,18 +59,24 @@ function createForm({ title, questions }) {
     return form;
 }
 
+
 function handleSubmitForm(event) {
     event.preventDefault();
     const form = event.currentTarget;
 
-    // const nameInput = form.elements['question1'];
-    // console.log(nameInput.value);
-    // console.dir(form);
+    showModal(form);
+}
 
 
-
-    // console.log(radioValues);
-
+function showModal(form) {
+    const userAnswers = getFormValues(form);
+    const quizAnswers = getAnswers(quizdata);
+    const wrapper = document.querySelector('.wrapper');
+    const testPercent = getTestResult(userAnswers, quizAnswers);
+    const isPassed = getTestResult(userAnswers, quizAnswers) >= 80;
+    const overlay = createOverlay(`Ваш результат: ${testPercent}%`, isPassed);
+    overlay.addEventListener('click', handleOverlayClick);
+    wrapper.prepend(overlay);
 }
 
 function handleRadioCheck(event) {
@@ -87,11 +91,16 @@ function handleRadioCheck(event) {
     submitBtn.disabled = false;
 }
 
+
 function getFormValues(form) {
     const formData = new FormData(form);
-    const formInputValues = [...formData.entries()];
-    return formInputValues;
+
+    const results = []
+    formData.forEach((value, name) => results.push([name, value]))
+
+    return results;
 }
+
 
 function createQuestionElement(questionId, question, choices) {
     const questionsListItem = createElementWithClass('li', 'questions-list-item');
@@ -112,13 +121,14 @@ function createQuestionElement(questionId, question, choices) {
     return questionsListItem;
 }
 
+
 function createAnswerListItem(questionId, answerId, answerText) {
     const answersListItem = createElementWithClass('li', 'answers-list-item');
     const radioInput = createElementWithClass('input', 'answer-check', 'visually-hidden')
     radioInput.type = 'radio';
-    radioInput.name = `question${questionId}`;
+    radioInput.name = `q${questionId}`;
     radioInput.value = answerId;
-    radioInput.id = `question${questionId}-answer${answerId}`;
+    radioInput.id = `q${questionId}-a${answerId}`;
 
     answersListItem.appendChild(radioInput);
 
@@ -131,6 +141,7 @@ function createAnswerListItem(questionId, answerId, answerText) {
     return answersListItem;
 }
 
+
 function createElementWithClass(tagName, ...cssClasses) {
 
     if (!tagName) return;
@@ -141,7 +152,48 @@ function createElementWithClass(tagName, ...cssClasses) {
     return tagElement;
 }
 
+function createOverlay(innerTextContent, isPassed) {
+
+    const overlayBlock = createElementWithClass('div', 'overlay');
+    const resultBlock = createElementWithClass('div', 'test-results');
+    const resultBlockText = createElementWithClass('p', 'test-results-content');
+
+    if (!isPassed) {
+        resultBlockText.classList.add('test-failed');
+    }
+
+    resultBlockText.textContent = innerTextContent;
+    resultBlock.appendChild(resultBlockText);
+    overlayBlock.appendChild(resultBlock);
+
+    return overlayBlock;
+}
+
+
 const quizForm = createForm(quizdata);
+
+function handleOverlayClick(event) {
+    const overlay = event.currentTarget;
+    overlay.remove();
+}
+
+
+function getTestResult(userAnswers, answers) {
+    const result = [];
+    for (const userAnswer of userAnswers) {
+        for (const answer of answers) {
+            if (userAnswer[0] == answer[0]) {
+                result.push(userAnswer[1] == answer[1]);
+            }
+        }
+    }
+
+    const rightAnswers = result.filter(isEqual => isEqual).length;
+    const percent = Math.round(rightAnswers * (100 / result.length));
+
+    return percent;
+}
+
 
 
 

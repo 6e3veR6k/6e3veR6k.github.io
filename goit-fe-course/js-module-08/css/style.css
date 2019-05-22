@@ -2,6 +2,7 @@
     --fg-color-main: #e4e4e4;
     --fg-color-inactive: #777777;
     --fg-color-active: #59b8e7;
+    --fg-color-failed: #c90b44;
     --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     --bg-color-light: #455A64;
@@ -71,6 +72,44 @@ ol, ul {
     Main
 ==========================================================================
 */
+
+.wrapper {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    background-color: #000000a4;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.test-results {
+    background: #ffffff;
+    width: 30rem;
+    padding: 2rem;
+    margin: auto;
+}
+
+.test-results p {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    border-width: .5rem;
+    border-style: solid;
+    color: var(--fg-color-active);
+    border-color: var(--fg-color-active);
+}
+
+p.test-failed {
+    color: var(--fg-color-failed);
+    border-color: var(--fg-color-failed);
+}
 
 .content {
     padding-top: 2rem;
