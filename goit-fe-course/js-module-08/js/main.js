@@ -29,27 +29,69 @@ import quizdata from './quiz-data.js';
 </ul> */
 
 /* ================== create objects =================== */
-createForm();
 
-function createForm() {
-    const quizes = [...quizdata.questions];
-    const quizesTitle = quizdata.title;
+const userAnswers = [];
+
+
+
+function getAnswers({ questions }) {
+    return questions.map((question, index) => [`question${index}`, `${question.answer}`]);
+}
+
+function createForm({ title, questions }) {
     const form = document.querySelector('form.questions-form')
 
+    // never use btn for click sumit form!!!
+    form.addEventListener('submit', handleSubmitForm);
+    form.addEventListener('input', handleRadioCheck);
+
     const formTitle = createElementWithClass('h2', 'questions-form-title');
-    formTitle.textContent = quizesTitle;
+    formTitle.textContent = title;
 
     const questionsList = createElementWithClass('ul', 'questions-list');
 
-    const listOfQuestions = quizes.reduce((aggr, question, index) => {
+    const listOfQuestions = questions.reduce((aggr, question, index) => {
         questionsList.appendChild(createQuestionElement(index, question.question, question.choices));
         return questionsList;
     }, questionsList);
 
     form.prepend(listOfQuestions);
     form.prepend(formTitle);
+
+    return form;
 }
 
+function handleSubmitForm(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    // const nameInput = form.elements['question1'];
+    // console.log(nameInput.value);
+    // console.dir(form);
+
+
+
+    // console.log(radioValues);
+
+}
+
+function handleRadioCheck(event) {
+    const form = event.currentTarget;
+    const userAnswers = getFormValues(form);
+    const quizAnswers = getAnswers(quizdata);
+    if (userAnswers.length != quizAnswers.length) {
+        return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = false;
+}
+
+function getFormValues(form) {
+    const formData = new FormData(form);
+    const formInputValues = [...formData.entries()];
+    return formInputValues;
+}
 
 function createQuestionElement(questionId, question, choices) {
     const questionsListItem = createElementWithClass('li', 'questions-list-item');
@@ -74,9 +116,9 @@ function createAnswerListItem(questionId, answerId, answerText) {
     const answersListItem = createElementWithClass('li', 'answers-list-item');
     const radioInput = createElementWithClass('input', 'answer-check', 'visually-hidden')
     radioInput.type = 'radio';
-    radioInput.name = `question-${questionId}`;
+    radioInput.name = `question${questionId}`;
     radioInput.value = answerId;
-    radioInput.id = `question-${questionId}-answer-${answerId}`;
+    radioInput.id = `question${questionId}-answer${answerId}`;
 
     answersListItem.appendChild(radioInput);
 
@@ -99,8 +141,8 @@ function createElementWithClass(tagName, ...cssClasses) {
     return tagElement;
 }
 
+const quizForm = createForm(quizdata);
 
 
-console.log(quizdata);
 
-console.log(createAnswerListItem(0, 0, "Rnj ns"));
+
