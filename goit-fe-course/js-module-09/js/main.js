@@ -58,13 +58,14 @@ function onImgClickHandle(event) {
 
   btnClose.addEventListener('click', onClickCloseIconHandle);
   window.addEventListener('keydown', onEscKeyDownHandle);
+  overlay.addEventListener('click', onOverlayClickHandle);
 }
 
 function showImg(targetImgSrc, targetImgAlt) {
   const imgContainer = overlay.querySelector('.content');
   let img = imgContainer.querySelector('img');
   // if we change only source in img tag we have few milliseconds
-  //    when we see old img before new loaded.
+  // when we see old img before new loaded.
   if (imgContainer.contains(img)) {
     imgContainer.removeChild(img);
   }
@@ -89,4 +90,9 @@ function closeOverlay() {
   overlay.classList.remove('is-visible');
   btnClose.removeEventListener('click', onClickCloseIconHandle);
   overlay.removeEventListener('keydown', onClickCloseIconHandle);
+}
+
+function onOverlayClickHandle(event) {
+  if (event.target != event.currentTarget) return;
+  closeOverlay();
 }
