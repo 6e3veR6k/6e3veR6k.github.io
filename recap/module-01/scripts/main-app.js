@@ -1,11 +1,7 @@
 "use strict";
 
-console.log("all works");
+const join = function(...arr) {
+  return arr.join(" | ");
+};
 
-const userName = "Dmitriy Bezvershuk";
-const len = userName.length;
-
-const userNameUpper = userName.toUpperCase();
-
-let someVar;
-console.log(someVar);
+console.log(join("one", "two", "three", "four"));
