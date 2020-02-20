@@ -1,3 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
 .vissually-hidden:not(:focus):not(:active),
 input[type="checkbox"].vissually-hidden,
 input[type="radio"].vissually-hidden {
@@ -14,7 +29,6 @@ overflow: hidden;
 }
 
 body{
-  box-sizing: border-box;
   font-family: 'Playfair Display', serif;
   font-size: 14px;
   color: #626262;
@@ -27,8 +41,8 @@ body{
 }
 
 .page-header {
-  padding-top: 72px;
-  margin-bottom: 102px;
+  padding-top: 42px;
+  margin-bottom: 62px;
 }
 
 .page-nav {
@@ -48,11 +62,7 @@ body{
 }
 
 .nav-link-list-item {
-    display: inline;
-}
-
-.nav-link-list-item:not(:last-of-type){
-  margin-right: 120px;
+    display: inline-block;
 }
 
 .nav-link {
@@ -60,6 +70,7 @@ body{
   text-decoration: none;
   line-height: 16px;
   color: #626262;
+  padding: 30px 60px;
 }
 
 .nav-link:focus,
@@ -67,16 +78,58 @@ body{
   color: #03a9f4;
 }
 
+.posts-list {
+  font-size: 0px;
+}
+
+.posts-list-item {
+  display: inline-block;
+  width: 420px;
+  overflow: hidden;
+}
+
+.posts-list-item:nth-child(-n+2) {
+  margin-bottom: 60px;
+}
+
+.posts-list-item:not(:nth-of-type(2n)) {
+  margin-right: 60px;
+}
+
+.post-img {
+  height: 280px;
+  margin-bottom: 32px;
+}
+
 .post-header {
   font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 42px;
 }
 
 .post-tag-link {
   display: block;
+  font-size: 14px;
+  line-height: 16px;
   font-family: "Ubuntu", Tahoma, sans-serif;
+  margin-bottom: 33px;
   text-transform: uppercase;
   text-decoration: none;
   color: #b4ad9e;
+}
+
+.post-tag-link:hover,
+.post-tag-link:focus {
+  color: #03a9f4;
+}
+
+.post-text {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.posts-list {
+  margin-bottom: 87px;
 }
 
 button {
@@ -85,4 +138,15 @@ button {
   padding: 16px 33px;
   border: 1px solid #626262;
   background: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #03a9f4;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.posts-view-section {
+  padding-bottom: 100px;
 }
